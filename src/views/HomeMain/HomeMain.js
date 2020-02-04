@@ -18,9 +18,8 @@ const useStyles = makeStyles(theme => ({
         color:"white",
         justifyContent:"center",
         alignItems:"center",
-        textAlign:"center",
         height: "50%",
-
+        margin: "auto",
     }
 }));
 
