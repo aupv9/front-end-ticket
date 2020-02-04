@@ -5,20 +5,27 @@ import { makeStyles } from '@material-ui/core/styles';
 import SearchForm from "../../components/SearchForm/SearchForm";
 
 
-
-
 const useStyles = makeStyles(theme => ({
     titleForm:{
         fontSize:"34px",
+        marginLeft:"10px"
+    },
+    container:{
+        position:"absolute",
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%, -50%)",
+        color:"white",
+        justifyContent:"center",
+        alignItems:"center",
+        textAlign:"center",
+        height: "50%",
 
     }
 }));
 
-
-
 const HomeMain = props => {
     const classes=useStyles();
-
 
     return (
         <div>
@@ -32,16 +39,7 @@ const HomeMain = props => {
                     style={{width:"100%",height: "100%",verticalAlign: "middle",
                         borderStyle: "none"}}/>
                 <Container maxWidth="md"
-                          style={{
-                              position:"absolute",
-                              left: "50%",
-                              top: "50%",
-                              transform: "translate(-50%, -50%)",
-                              color:"white",
-                              justifyContent:"center",
-                              alignItems:"center"
-                          }}
-                           >
+                          className={classes.container} >
                     <h2 className={classes.titleForm}>Đặt Vé Xe Rẻ</h2>
                     <SearchForm/>
                 </Container>
